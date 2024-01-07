@@ -16,7 +16,7 @@ body {
 .app {
     height: 100vh;
     padding: 1rem;
-    background-color: papayawhip;
+    background-color: blue;
     display: flex;
     align-items: center;
     justify-content: center;

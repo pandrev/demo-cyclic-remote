@@ -6,7 +6,7 @@
 const char* SSID = "Vodafone-30B1D7_EXT";
 const char* PASSWORD = "763AHFHG33MHDX6T";
 //#define SERVER "esp-socket-switch.heSrokuapp.com"  // Server URL (without https://www)
-#define SERVER "127.0.0.1:4001"
+const char* SERVER = "wss://demo-cyclic-remote.onrender.com";
 
 #define LED 2
 
@@ -73,7 +73,7 @@ void setup() {
   setupWiFi();
 
   // server address, port and URL
-  socketIO.begin(SERVER, 80, "/socket.io/?EIO=4");
+ socketIO.begin(SERVER, 443, "/socket.io/?transport=websocket");
 
   socketIO.onEvent(socketIOEvent);
 }
